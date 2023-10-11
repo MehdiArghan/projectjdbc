@@ -3,11 +3,12 @@ package service;
 import entity.Author;
 import repository.author.AuthorRepository;
 import view.CreateList;
+
 import java.util.Arrays;
 
 public class AuthorService {
     private AuthorRepository authorRepository = new AuthorRepository();
-    private BookService bookService=new BookService();
+    private BookService bookService = new BookService();
 
     public void register(String firstName, String lastName, int age) {
         Author author = new Author();

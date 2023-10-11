@@ -20,11 +20,11 @@ public class CreateList {
 
     public void createBook() {
 
-        String[] title = {"math", "history", "english","culture"};
+        String[] title = {"math", "history", "english", "culture"};
         for (int i = 1; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 int publishedYear = 2016;
-                bookService.addBook(title[j], publishedYear + j , i);
+                bookService.addBook(title[j], publishedYear + j, i);
             }
         }
     }
@@ -33,7 +33,7 @@ public class CreateList {
     public void printAuthorBook(int authorId) {
         for (Book book : bookService.authorBookList(authorId)) {
             if (book != null) {
-                System.out.println(book.getTitle()+" : "+book.getPublishedYear());
+                System.out.println(book.getTitle() + " : " + book.getPublishedYear());
             } else {
                 System.out.println("book is null");
             }

@@ -147,7 +147,7 @@ public class AuthorRepository {
                 preparedStatement = connection.prepareStatement(LOAD_ALL);
                 resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
-                   authorId=resultSet.getInt("author_id");
+                    authorId = resultSet.getInt("author_id");
                 }
             }
         } catch (SQLException e) {

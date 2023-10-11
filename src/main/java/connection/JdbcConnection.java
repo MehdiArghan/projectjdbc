@@ -1,6 +1,7 @@
 package connection;
 
-import com.zaxxer.hikari.*;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,20 +30,20 @@ public class JdbcConnection {
         return datasource.getConnection();
     }
 
-    public static  void closeConnection(Connection connection) throws SQLException {
+    public static void closeConnection(Connection connection) throws SQLException {
         if (connection != null) {
             connection.close();
         }
     }
 
-    public static  void closePreparedStatement(PreparedStatement preparedStatement) throws SQLException {
+    public static void closePreparedStatement(PreparedStatement preparedStatement) throws SQLException {
         if (preparedStatement != null) {
             preparedStatement.close();
         }
     }
 
 
-    public static  void closeResultSet(ResultSet resultSet) throws SQLException {
+    public static void closeResultSet(ResultSet resultSet) throws SQLException {
         if (resultSet != null) {
             resultSet.close();
         }
